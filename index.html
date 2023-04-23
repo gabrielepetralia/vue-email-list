@@ -25,8 +25,22 @@
 <body>
   <div id="app">
     <div class="container">
-      <table class="table border-black">
-        <h1 class="my-5">Email List</h1>
+      <h1 class="my-5">Email List</h1>
+      <div v-if="loading" class="lds-spinner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <table v-else class="table border-black">
         <thead>
           <tr>
             <th scope="col">Index</th>
