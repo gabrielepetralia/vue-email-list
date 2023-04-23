@@ -25,7 +25,16 @@
 <body>
   <div id="app">
     <div class="container">
-      <h1 class="my-5">Email List</h1>
+
+      <div class="row justify-content-between my-5">
+        <div class="col">
+          <h1>Email List</h1>
+        </div>
+        <div class="col text-end">
+          <div @click="getApi" class="btn btn-dark">Generate new emails</div>
+        </div>
+      </div>
+  
       <div v-if="loading" class="lds-spinner">
         <div></div>
         <div></div>
@@ -40,6 +49,7 @@
         <div></div>
         <div></div>
       </div>
+
       <table v-else class="table border-black">
         <thead>
           <tr>
@@ -54,6 +64,7 @@
           </tr>
         </tbody>
       </table>
+
     </div>
   </div>
 

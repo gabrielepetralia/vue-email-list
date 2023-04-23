@@ -12,6 +12,7 @@ createApp({
 
   methods : {
     getApi() {
+      this.loading = true;
       for (let i=0; i < this.numEmails; i++) {
         axios.get(this.apiUrl) 
           .then ( result => {
